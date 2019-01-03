@@ -1,0 +1,27 @@
+Establecer inventario del día
+Actualizar existencia del inventario del día
+
+Inicialización de las mesas
+Desarrollo de la cuenta
+Divisíon de la cuenta [Creación de cuenta ya incluye la opción de dividir]
+Impresión de ticket
+Pago de la cuenta 
+Emisión de factura
+
+Asignar propinas
+Historial del mesero
+Pago de nómina
+
+Calendario mensual de personal
+Calendario de meseros por sistema
+
+Reportes **
+
+Alta de empleado
+Actualización de empleado
+Búesqueda de empleado
+
+Alta de platillo
+Baja lógica de platillo
+Actualización de platillo
+Búsqueda de platillo

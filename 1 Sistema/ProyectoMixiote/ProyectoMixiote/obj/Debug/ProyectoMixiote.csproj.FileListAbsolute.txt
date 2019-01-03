@@ -1,0 +1,16 @@
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe.config
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.pdb
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csprojAssemblyReference.cache
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.InicializarMesas.resources
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.Properties.Resources.resources
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csproj.GenerateResource.cache
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csproj.CoreCompileInputs.cache
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.exe
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.pdb
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.CreacionDeCuenta.resources
+D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.DesarrolloDeCuenta.resources
+D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.PagoDeCuenta.resources
+D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.AsignarPropinas.resources
+D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.HistorialMesero.resources
+D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.PagoNomina.resources

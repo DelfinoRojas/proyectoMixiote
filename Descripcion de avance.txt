@@ -1,0 +1,19 @@
+El sistema se comprende las siguientes categorías:
+
+
+Elementos a entragar			||		% Desarrollo
+____________________________________________________________________
+
+Documentación
+		Diseño de pantallas			70%
+		Identificación de casos de uso		90%
+		Diagrama relacional			0%
+		Diagrama de entidad relación		0%
+
+
+Sistema
+		Interfaz (C#) 				40 %					
+		Base de datos				40 %
+				
+	
+

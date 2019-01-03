@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoMixiote", "ProyectoMixiote\ProyectoMixiote.csproj", "{F2E81EAF-554D-4E98-B7D3-5EB5BF72128B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2E81EAF-554D-4E98-B7D3-5EB5BF72128B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E81EAF-554D-4E98-B7D3-5EB5BF72128B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E81EAF-554D-4E98-B7D3-5EB5BF72128B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E81EAF-554D-4E98-B7D3-5EB5BF72128B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A576F2B-9B6C-4EF6-8F69-265B325885F3}
+	EndGlobalSection
+EndGlobal
