@@ -22,7 +22,7 @@ namespace ProyectoMixiote
             try
             {
                 cnx.Open();
-                MessageBox.Show("Conexión establecida con SqlServer");
+                //MessageBox.Show("Conexión establecida con SqlServer");
             }
             catch (Exception e)
             {

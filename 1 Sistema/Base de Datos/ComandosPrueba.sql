@@ -58,7 +58,7 @@ END
 /*	Ejecución del procedimiento almacenado SPsistema_GetFormacion		*/
 
 DECLARE @salida int
-EXECUTE SPsistema_GetFormacion 1, @salida OUTPUT
+EXECUTE SPsistema_GetFormacionMesa 1, @salida OUTPUT
 SELECT @salida AS nMesas;
 
 --	----------------------------------------------------------------------

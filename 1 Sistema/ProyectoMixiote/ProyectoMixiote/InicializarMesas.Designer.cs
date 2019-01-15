@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicializarMesas));
             this.lblnummesas = new System.Windows.Forms.Label();
             this.txtmesas = new System.Windows.Forms.TextBox();
-            this.btnfijar = new System.Windows.Forms.Button();
             this.gbfrontal = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -119,6 +119,7 @@
             this.rbpartefrontal = new System.Windows.Forms.RadioButton();
             this.rbjardin = new System.Windows.Forms.RadioButton();
             this.gbasignaciondemesas = new System.Windows.Forms.GroupBox();
+            this.btnfijar = new System.Windows.Forms.Button();
             this.gbfrontal.SuspendLayout();
             this.gbjardin.SuspendLayout();
             this.gbasignaciondemesas.SuspendLayout();
@@ -141,18 +142,6 @@
             this.txtmesas.Name = "txtmesas";
             this.txtmesas.Size = new System.Drawing.Size(135, 26);
             this.txtmesas.TabIndex = 1;
-            // 
-            // btnfijar
-            // 
-            this.btnfijar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfijar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnfijar.Location = new System.Drawing.Point(409, 42);
-            this.btnfijar.Name = "btnfijar";
-            this.btnfijar.Size = new System.Drawing.Size(108, 70);
-            this.btnfijar.TabIndex = 2;
-            this.btnfijar.Text = "Fijar";
-            this.btnfijar.UseVisualStyleBackColor = true;
-            this.btnfijar.Click += new System.EventHandler(this.btnfijar_Click);
             // 
             // gbfrontal
             // 
@@ -1165,6 +1154,21 @@
             this.gbasignaciondemesas.TabIndex = 6;
             this.gbasignaciondemesas.TabStop = false;
             this.gbasignaciondemesas.Text = "Asignación de mesas";
+            // 
+            // btnfijar
+            // 
+            this.btnfijar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfijar.ForeColor = System.Drawing.Color.Black;
+            this.btnfijar.Image = ((System.Drawing.Image)(resources.GetObject("btnfijar.Image")));
+            this.btnfijar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnfijar.Location = new System.Drawing.Point(424, 53);
+            this.btnfijar.Name = "btnfijar";
+            this.btnfijar.Size = new System.Drawing.Size(108, 54);
+            this.btnfijar.TabIndex = 2;
+            this.btnfijar.Text = "Fijar";
+            this.btnfijar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnfijar.UseVisualStyleBackColor = true;
+            this.btnfijar.Click += new System.EventHandler(this.btnfijar_Click);
             // 
             // InicializarMesas
             // 

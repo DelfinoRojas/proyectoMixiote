@@ -16,7 +16,7 @@ namespace ProyectoMixiote
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InicializarMesas());
+            Application.Run(new CreacionDeCuenta("hola"));
         }
     }
 }

@@ -12,10 +12,10 @@ namespace ProyectoMixiote
 {
     public partial class CreacionDeCuenta : Form
     {
-        public CreacionDeCuenta(String nombre)
+        public CreacionDeCuenta(string nombre)
         {
             InitializeComponent();
-            MessageBox.Show(nombre);
+            //MessageBox.Show(nombre);
         }
 
         private void cerrar(object sender, EventArgs e)

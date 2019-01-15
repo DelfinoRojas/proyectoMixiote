@@ -32,15 +32,14 @@ namespace ProyectoMixiote
             limpiarMesas();
 
             GroupBox elegido = new GroupBox();
-            int nmesas = formacion[0]; // Limite de mesas a crear
-            int iconteo = 1; // Inicio de la numeración de mesas
             elegido = gbfrontal;
+            int iconteo = 1; // Inicio de la numeración de mesas
+            int nmesas = formacion[0]; // Limite de mesas a crear
             crearMesas(elegido, iconteo, nmesas);
 
             elegido = gbjardin;
-            iconteo = 28;
-            nmesas += formacion[1]+ formacion[0];
-
+            iconteo = formacion[0]+1;
+            nmesas = formacion[1] + formacion[0];
             crearMesas(elegido, iconteo, nmesas);
         }
 
@@ -59,8 +58,11 @@ namespace ProyectoMixiote
             int distylabel = 45; //Altura de las etiquetas (libre/Ocupado)
             int distybutton = 38; //Altura de los botones (mesa n)
 
+            int conta = 0; //Permite hacer los recorridos de elementos cada módulo 9
+
             for (int x = inicioConteo; x <= nmesas; x++)
             {
+                conta++;
                 Label lbl = new Label();
                 lbl.Location = new Point(distxlabel, distylabel);
                 lbl.Width = 40;
@@ -86,7 +88,7 @@ namespace ProyectoMixiote
                 gb.Controls.Add(btn);
                 // Para desplazar los elementos a la derecha se aumenta el valor de las (x)
                 // y se inicializa el valor de las (y)
-                if (x % 9 == 0) 
+                if (conta % 9 == 0) 
                 {
                     distxlabel += 180;
                     distxbutton += 180;
