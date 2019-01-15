@@ -52,6 +52,8 @@
     <Compile Include="AsignarPropinas.Designer.cs">
       <DependentUpon>AsignarPropinas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="ControlSistema.cs" />
     <Compile Include="CreacionDeCuenta.cs">
       <SubType>Form</SubType>
     </Compile>

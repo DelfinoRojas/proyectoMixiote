@@ -1,0 +1,14 @@
+Tipos de funciones SQL SERVER	(Son 3 tipos)
+
+	https://www.youtube.com/watch?v=yoaq5eOzh2M
+
+Tipos de procedimientos almacenados SQL SERVER
+	
+	https://www.youtube.com/watch?v=4hRwJt8BACQ	
+
+--	Atención a a función Recompile: Aparece al final del video	--
+	
+Tipos de vistas SQL SERVER
+	
+	
+		

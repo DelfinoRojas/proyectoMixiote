@@ -17,3 +17,7 @@ _________________________________________________________
 Crear controles dentro de un contenedor
 	https://www.youtube.com/watch?v=evmy60nj2YA
 
+Obtener nombre del botón que envía el evento
+	https://social.msdn.microsoft.com/Forums/es-ES/7592a9a6-9481-4949-b97a-b7ca01fcd0ef/obtener-nombre-del-que-envia-el-evento?forum=vcses
+
+

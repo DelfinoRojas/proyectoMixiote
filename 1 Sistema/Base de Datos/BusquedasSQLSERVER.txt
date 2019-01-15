@@ -1,0 +1,2 @@
+Valores por defecto (default) en un campo
+	http://www.tutorialesprogramacionya.com/sqlserverya/temarios/descripcion.php?cod=27&punto=21&inicio=
