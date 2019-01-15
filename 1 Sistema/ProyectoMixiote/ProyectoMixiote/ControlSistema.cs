@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
-using System.Data;
 
 namespace ProyectoMixiote
 {
@@ -22,35 +21,34 @@ namespace ProyectoMixiote
             objeConexion = new Conexion();
         }
 
-        public int getFormacion(int option)
+        public int[] getFormacion()
         {
-            string query = "SPsistema_GetFormacionMesa"; //Nombre del procedimiento almacenado
+            string query = "SELECT parteFrontal,jardin FROM FormacionMesa"; //Nombre del procedimiento almacenado
             cnx = objeConexion.conectar();
             SqlCommand comando = new SqlCommand(query,cnx);
-            comando.CommandType = CommandType.StoredProcedure; // Se debe importar la librería "using System.Data"
+            SqlDataReader leer = comando.ExecuteReader();
 
-            comando.Parameters.Add("@elec", SqlDbType.Int).Value = option;
-            comando.Parameters.Add("@result", SqlDbType.Int).Direction = ParameterDirection.Output;
+            int []datos=new int[2];
 
-            int resultado = 0;
             try
             {
-                SqlDataReader leer = comando.ExecuteReader();
-    
-                    resultado = leer.GetInt32(0);
-                    MessageBox.Show("1 El valor es " + resultado);
-                
-
-                MessageBox.Show("El valor es "+ resultado);
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        //MessageBox.Show(leer.FieldCount.ToString());  Devuelve el número de campos del registro
+                        datos[0] = leer.GetInt32(0);
+                        datos[1] = leer.GetInt32(1);
+                        //MessageBox.Show("Ya se leyó");
+                    }
+                }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex);
-                MessageBox.Show("Falló la consulta getFormacion Control Sistema");
+                //MessageBox.Show("Falló la consulta");
             }
-
-            objeConexion.cerrar();
-            return resultado;
+            return datos;
         }
     }
 }

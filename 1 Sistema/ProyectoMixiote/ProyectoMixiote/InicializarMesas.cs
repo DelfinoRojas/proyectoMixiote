@@ -27,12 +27,10 @@ namespace ProyectoMixiote
 
         private void obtenerFormacion()
         {
-            int formacion = controladorSistema.getFormacion(1);
+            int[] formacion = controladorSistema.getFormacion();
 
-            MessageBox.Show(formacion+"");
             limpiarMesas();
 
-            /*
             GroupBox elegido = new GroupBox();
             int nmesas = formacion[0]; // Limite de mesas a crear
             int iconteo = 1; // Inicio de la numeración de mesas
@@ -43,11 +41,7 @@ namespace ProyectoMixiote
             iconteo = 28;
             nmesas += formacion[1]+ formacion[0];
 
-    
-
             crearMesas(elegido, iconteo, nmesas);
-
-    */
         }
 
         private void limpiarMesas()
