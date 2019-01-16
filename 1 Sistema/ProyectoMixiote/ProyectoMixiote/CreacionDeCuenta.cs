@@ -38,7 +38,7 @@ namespace ProyectoMixiote
         private void salir(object sender, FormClosedEventArgs e)
         {
             this.Dispose();
-            InicializarMesas form = new InicializarMesas();
+            InicializarMesas form = new InicializarMesas(2);
             form.Visible = true;
         }
     }

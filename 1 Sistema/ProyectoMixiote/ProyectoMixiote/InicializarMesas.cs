@@ -13,44 +13,47 @@ namespace ProyectoMixiote
     public partial class InicializarMesas : Form
     {
         private ControlSistema controladorSistema; //Variable global que conecta con el controlador general del Sistema
+        int[] formacion = new int[2]; //Almacena el número de mesas de ambas zonas del restaurante
 
-        public InicializarMesas() 
+        public InicializarMesas(int op) 
         {
             InitializeComponent();
            
             controladorSistema = new ControlSistema(); //Se inicializa la variable que conecta con el controlador 
 
+            if (op==1)
+            {
+
+            }
+            else
+            {
+
+            }
             obtenerFormacion(); // Comienza el proceso de creación de mesas y asignación de estado
             rbpartefrontal.Checked = true;
-
+            
         }
 
         private void obtenerFormacion()
         {
-            int[] formacion = controladorSistema.getFormacion();
+            formacion = controladorSistema.getFormacion();
+            int[] ocupadas = controladorSistema.getMesasOcupadas();
 
             limpiarMesas();
 
-            GroupBox elegido = new GroupBox();
-            elegido = gbfrontal;
-            int iconteo = 1; // Inicio de la numeración de mesas
-            int nmesas = formacion[0]; // Limite de mesas a crear
-            crearMesas(elegido, iconteo, nmesas);
-
-            elegido = gbjardin;
-            iconteo = formacion[0]+1;
-            nmesas = formacion[1] + formacion[0];
-            crearMesas(elegido, iconteo, nmesas);
+            crearMesas(formacion,ocupadas);
         }
 
         private void limpiarMesas()
         {
             gbfrontal.Controls.Clear();
             gbjardin.Controls.Clear();
+            gbfrontal.Text = "Parte frontal -- Max(27)";
+            gbjardin.Text = "Jardín -- Max(18)";
         }
 
         
-        private void crearMesas(GroupBox gb, int inicioConteo, int nmesas)
+        private void crearMesas(int []formacion, int []ocupadas)
         {
             int distxlabel = 15; //Posición en x de las etiquetas (libre/Ocupado)
             int distxbutton = 90; //Posición en x de los botones (mesa n)
@@ -60,8 +63,24 @@ namespace ProyectoMixiote
 
             int conta = 0; //Permite hacer los recorridos de elementos cada módulo 9
 
-            for (int x = inicioConteo; x <= nmesas; x++)
+            GroupBox gb = new GroupBox();
+
+            for (int x = 1; x <= formacion[0]+formacion[1]; x++)
             {
+                if (x==1)
+                {
+                    gb = gbfrontal;
+                    gb.Text += ":  <" + formacion[0] + ">";
+                }else if (x==formacion[0]+1){
+                    gb = gbjardin;
+                    gb.Text += ":  <" + formacion[1] + ">";
+
+                    distxlabel = 15;
+                    distxbutton = 90;
+                    distylabel = 45;
+                    distybutton = 38;
+                    conta = 0;
+                }
                 conta++;
                 Label lbl = new Label();
                 lbl.Location = new Point(distxlabel, distylabel);
@@ -99,26 +118,32 @@ namespace ProyectoMixiote
             }
         }
 
+        private void btnmas_Click(object sender, EventArgs e)
+        {
+            int nmesas = Convert.ToInt32(txtmesas.Text); // Se obtiene el número que contiene el textbox txtmesas
+            nmesas += 1;
+            txtmesas.Text = nmesas + "";
+        }
+
+        private void btnmenos_Click(object sender, EventArgs e)
+        {
+            int nmesas = Convert.ToInt32(txtmesas.Text); // Se obtiene el número que contiene el textbox txtmesas
+            nmesas -= 1;
+            txtmesas.Text = nmesas + "";
+        }
+
         private void btnfijar_Click(object sender, EventArgs e)
         {
-            GroupBox elegido = new GroupBox();
-            int nmesas = Convert.ToInt32(txtmesas.Text); // Limite de mesas a crear
-            int iconteo = 0; // Inicio de la numeración de mesas
-
-            if (rbpartefrontal.Checked)
+            int nmesas = Convert.ToInt32(txtmesas.Text); // Se obtiene el número que contiene el textbox txtmesas
+            int option = 0;
+            int parametro = formacion[0];
+            if (rbjardin.Checked)
             {
-                elegido = gbfrontal;
-                iconteo = 1;
+                option = 1;
+                parametro = formacion[1];
             }
-            else
-            {
-                elegido = gbjardin;
-                iconteo = 28;
-                nmesas += 27;
-            }
-            elegido.Controls.Clear();
-
-            crearMesas(elegido, iconteo, nmesas);
+            controladorSistema.setFormacion(option,nmesas,parametro);
+            obtenerFormacion();
         }
 
 
@@ -137,6 +162,19 @@ namespace ProyectoMixiote
             this.Dispose();
             this.Close();
             Application.Exit();
+        }
+
+        //Método que valida el cambio en el estado "Check" del radioButton Frontal
+        private void rbpartefrontal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbpartefrontal.Checked)
+            {
+                txtmesas.Text = formacion[0]+"";
+            }
+            else
+            {
+                txtmesas.Text = formacion[1]+"";
+            }
         }
     }
 }

@@ -46,9 +46,44 @@ namespace ProyectoMixiote
             catch (Exception ex)
             {
                 System.Console.Write(ex);
-                //MessageBox.Show("Falló la consulta");
+                //MessageBox.Show("Falló la consulta getFormacion");
             }
+
+            objeConexion.cerrar();
             return datos;
+        }
+
+        public void setFormacion(int option,int mesas,int parametro)
+        {
+            string query = "";
+            if (option==0)
+            {
+                query = "UPDATE FormacionMesa SET parteFrontal = '"+ mesas +"' WHERE parteFrontal ='"+parametro+"'"; 
+            }
+            else if(option==1)
+            {
+                query = "UPDATE FormacionMesa SET jardin = '" + mesas + "' WHERE jardin ='" + parametro + "'";
+
+            }            
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta setFormacion");
+            }
+            objeConexion.cerrar();
+        }
+
+        public int[] getMesasOcupadas()
+        {
+            int[] ocupadas= {1,2};
+
+            return ocupadas;
         }
     }
 }
