@@ -37,7 +37,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbomesas = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -119,7 +119,7 @@
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbomesas);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox2);
@@ -188,14 +188,16 @@
             this.button8.Text = "Asignar mesa";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // cbomesas
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(59, 35);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(106, 24);
-            this.comboBox3.TabIndex = 2;
+            this.cbomesas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbomesas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbomesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbomesas.FormattingEnabled = true;
+            this.cbomesas.Location = new System.Drawing.Point(59, 35);
+            this.cbomesas.Name = "cbomesas";
+            this.cbomesas.Size = new System.Drawing.Size(106, 24);
+            this.cbomesas.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -544,7 +546,7 @@
             this.Name = "CreacionDeCuenta";
             this.Text = "CreacionDeCuenta";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.salir);
-            this.Load += new System.EventHandler(this.cargarform);
+            this.Load += new System.EventHandler(this.CreacionDeCuenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -585,7 +587,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbomesas;
         private System.Windows.Forms.TextBox txtm3;
         private System.Windows.Forms.TextBox txtm2;
         private System.Windows.Forms.TextBox textBox7;

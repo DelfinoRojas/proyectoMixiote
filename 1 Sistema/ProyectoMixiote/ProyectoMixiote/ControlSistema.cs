@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
 
+using System.Data;
+
 namespace ProyectoMixiote
 {
     class ControlSistema
@@ -39,14 +41,13 @@ namespace ProyectoMixiote
                         //MessageBox.Show(leer.FieldCount.ToString());  Devuelve el número de campos del registro
                         datos[0] = leer.GetInt32(0);
                         datos[1] = leer.GetInt32(1);
-                        //MessageBox.Show("Ya se leyó");
                     }
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex);
-                //MessageBox.Show("Falló la consulta getFormacion");
+                MessageBox.Show("Falló la consulta getFormacion");
             }
 
             objeConexion.cerrar();
@@ -79,11 +80,169 @@ namespace ProyectoMixiote
             objeConexion.cerrar();
         }
 
-        public int[] getMesasOcupadas()
+        public void createTableMesa()
         {
-            int[] ocupadas= {1,2};
 
-            return ocupadas;
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand("SPsistema_CrearEstadoMesa", cnx); //Se ejecuta el procedimiento almacenado
+            comando.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                //System.Console.Write(ex);
+                MessageBox.Show("Falló el procedimiento createTableMesa");
+            }
+
+            objeConexion.cerrar();
         }
+
+        public void dropTableMesa()
+        {
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand("SPsistema_EliminarTableMesa", cnx); //Se ejecuta el procedimiento almacenado
+            comando.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                //System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta dropTableMesa");
+            }
+
+            objeConexion.cerrar();
+        }
+
+        public List<string> getMesasOcupadas()
+        {
+            string query = "SELECT estado FROM Mesa";
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+
+            List<string> lista = new List<string>();
+
+            try
+            {
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        lista.Add(leer["estado"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta getMesasOcupadas");
+            }
+
+            objeConexion.cerrar();
+
+            return lista;
+        }
+
+        public string getFolioDeMesa(string nombreMesa)
+        {
+            string query = "SELECT estado FROM Mesa WHERE nombreMesa = '"+ nombreMesa + "'";
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+
+            string folio = "";
+            try
+            {
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        folio=leer["estado"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta getFolioDeMesa");
+            }
+
+            objeConexion.cerrar();
+            return folio;
+        }
+
+        public void getcomboMesas(ComboBox cbo)
+        {
+            int[] formacion = getFormacion(); // Se obtiene el número de mesas de cada área
+
+            string query = "SELECT nombreMesa FROM Mesa WHERE estado=''";
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+
+            List<string> lista = new List<string>();
+
+            try
+            {
+                SqlDataReader leer = comando.ExecuteReader();
+                int conta = 1;
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        if (conta<=formacion[0]) //Identifica las mesas de la parte frontal
+                        {
+                            cbo.Items.Add("(F)  "+leer["nombreMesa"].ToString());
+                            if (conta==formacion[0])
+                            {
+                                cbo.Items.Add(""); //Crea una separación dentro del combo
+                            }
+                        }
+                        else //Identifica las mesas del jardin
+                        {
+                            cbo.Items.Add("(J)  " + leer["nombreMesa"].ToString());
+                        }
+                        conta++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta getcomboMesas");
+            }
+
+            objeConexion.cerrar();
+        }
+
+        public void verifcarExistenciaCuenta(string folioMesa)
+        {
+            string query = "SELECT * FROM Folio WHERE folioVenta = '" + folioMesa + "'";
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+
+            try
+            {
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta getFolioDeMesa");
+            }
+
+            objeConexion.cerrar();
+        }
+
     }
 }

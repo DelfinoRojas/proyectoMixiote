@@ -21,14 +21,11 @@ namespace ProyectoMixiote
            
             controladorSistema = new ControlSistema(); //Se inicializa la variable que conecta con el controlador 
 
-            if (op==1)
+            if (op==1)//El llamado se hace al iniciar el sistema. Se crea la tabla Mesa
             {
-
+                controladorSistema.createTableMesa();
             }
-            else
-            {
-
-            }
+           
             obtenerFormacion(); // Comienza el proceso de creación de mesas y asignación de estado
             rbpartefrontal.Checked = true;
             
@@ -37,11 +34,26 @@ namespace ProyectoMixiote
         private void obtenerFormacion()
         {
             formacion = controladorSistema.getFormacion();
-            int[] ocupadas = controladorSistema.getMesasOcupadas();
+            List<string> mesas = controladorSistema.getMesasOcupadas();
+
+            //Console.Write("\n-----Número de mesas  "+mesas.Count+ "\n");
+
+            /*
+            for (int x=0;x<mesas.Count;x++)
+            {
+                MessageBox.Show("Mesa n. "+x+":  "+mesas[x]);
+            }
+            ------------------------------------------------------
+            mesas.ForEach(delegate (String name)
+            {
+                Console.WriteLine(name+"\n");
+            });
+            */
+            //string[] ocupadas= mesas.ToArray();
 
             limpiarMesas();
 
-            crearMesas(formacion,ocupadas);
+            crearMesas(formacion,mesas);
         }
 
         private void limpiarMesas()
@@ -53,7 +65,7 @@ namespace ProyectoMixiote
         }
 
         
-        private void crearMesas(int []formacion, int []ocupadas)
+        private void crearMesas(int []formacion, List<string> ocupadas)
         {
             int distxlabel = 15; //Posición en x de las etiquetas (libre/Ocupado)
             int distxbutton = 90; //Posición en x de los botones (mesa n)
@@ -67,11 +79,11 @@ namespace ProyectoMixiote
 
             for (int x = 1; x <= formacion[0]+formacion[1]; x++)
             {
-                if (x==1)
+                if (x==1) //Se trabaja con el gruopBox parteFronatl
                 {
                     gb = gbfrontal;
                     gb.Text += ":  <" + formacion[0] + ">";
-                }else if (x==formacion[0]+1){
+                }else if (x==formacion[0]+1){ //Se trabaja con el groupBox jardin
                     gb = gbjardin;
                     gb.Text += ":  <" + formacion[1] + ">";
 
@@ -87,7 +99,17 @@ namespace ProyectoMixiote
                 lbl.Width = 40;
                 lbl.Height = 18;
                 lbl.Font = new Font(lbl.Font.FontFamily, 11);
-                lbl.ForeColor = Color.FromArgb(0, 192, 0);
+                
+                if (ocupadas[x-1].Equals(""))
+                {
+                    lbl.ForeColor = Color.FromArgb(0, 192, 0);
+                }
+                else
+                {
+                    lbl.ForeColor = Color.FromArgb(192, 0, 0);
+                }
+                
+
                 distylabel += 34;
                 lbl.Name = "lblmesa" + x;
                 lbl.Text = "Libre";
@@ -99,7 +121,7 @@ namespace ProyectoMixiote
                 btn.Font = new Font(btn.Font.FontFamily, 11);
                 distybutton += 34;
                 //btn.Name = "btnmesa" + x;
-                btn.Name = x+"";
+                btn.Name = "Mesa_" + x;
                 btn.Text = "Mesa " + x;
 
                 btn.Click += new EventHandler(handlerComun_Click);
@@ -143,6 +165,7 @@ namespace ProyectoMixiote
                 parametro = formacion[1];
             }
             controladorSistema.setFormacion(option,nmesas,parametro);
+            controladorSistema.createTableMesa();
             obtenerFormacion();
         }
 
@@ -153,12 +176,13 @@ namespace ProyectoMixiote
             this.Hide();
 
             Button boton = sender as Button; // Esta línea permite acceder posteriormente a las propiedades del botón
-            CreacionDeCuenta form = new CreacionDeCuenta(boton.Name); // Se envía el nombre del botón al formulario []
+            CreacionDeCuenta form = new CreacionDeCuenta(1,boton.Name); // Se envía el nombre del botón al formulario []
             form.Visible=true;
         }        
 
         private void salir(object sender, FormClosedEventArgs e)
         {
+            controladorSistema.dropTableMesa();
             this.Dispose();
             this.Close();
             Application.Exit();

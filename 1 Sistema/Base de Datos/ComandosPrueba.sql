@@ -28,7 +28,7 @@ END
 
 	/*	Ejecución del procedimiento almacenado SPsistema_FormacionMesa		*/
 
-EXECUTE SPsistema_FormacionMesa 24,10
+EXECUTE SPsistema_SetFormacionMesa 2,2
 
 SELECT * FROM FormacionMesa
 
@@ -87,6 +87,10 @@ BEGIN
 	SELECT @jardin=jardin FROM FormacionMesa;
 	SET @nMesas=@frontal+@jardin;
 
+	BEGIN
+		IF exists (SELECT * FROM sys.objects WHERE name = 'Mesa' and TYPE = 'u') --Elimina la tabla Mesa si existe (Funciona 100%)
+		DROP TABLE Mesa
+	END
 	BEGIN -- ----------------------------		Se crea la tabla Mesa
 		CREATE TABLE Mesa(
 			idMesa int identity (1,1),
