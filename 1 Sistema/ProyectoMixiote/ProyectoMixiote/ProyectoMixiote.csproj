@@ -66,6 +66,7 @@
     <Compile Include="DesarrolloDeCuenta.Designer.cs">
       <DependentUpon>DesarrolloDeCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Folio.cs" />
     <Compile Include="HistorialMesero.cs">
       <SubType>Form</SubType>
     </Compile>

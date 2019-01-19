@@ -87,7 +87,7 @@ namespace ProyectoMixiote
                     gb = gbjardin;
                     gb.Text += ":  <" + formacion[1] + ">";
 
-                    distxlabel = 15;
+                    distxlabel = 15; //Se vuelven a inicializar las variables de ubicación
                     distxbutton = 90;
                     distylabel = 45;
                     distybutton = 38;
@@ -96,23 +96,26 @@ namespace ProyectoMixiote
                 conta++;
                 Label lbl = new Label();
                 lbl.Location = new Point(distxlabel, distylabel);
-                lbl.Width = 40;
+                
                 lbl.Height = 18;
                 lbl.Font = new Font(lbl.Font.FontFamily, 11);
                 
-                if (ocupadas[x-1].Equals(""))
+                if (ocupadas[x-1].Equals(""))//Indica que la mesa está libre
                 {
+                    lbl.Width = 40;
                     lbl.ForeColor = Color.FromArgb(0, 192, 0);
+                    lbl.Text = "Libre";
                 }
-                else
+                else //Indica que la mesa está ocupada
                 {
+                    lbl.Width = 69;
                     lbl.ForeColor = Color.FromArgb(192, 0, 0);
+                    lbl.Text = "Ocupada";
                 }
                 
 
                 distylabel += 34;
                 lbl.Name = "lblmesa" + x;
-                lbl.Text = "Libre";
 
                 Button btn = new Button();
                 btn.Location = new Point(distxbutton, distybutton);

@@ -32,6 +32,7 @@ namespace ProyectoMixiote
                 folio = parametro; //Se asigna el folio proveniente de un formulario diferente de "InicializarMesas"
             }
 
+            //MessageBox.Show("El folio es: "+folio);
             establecerInfoCuenta(folio);
 
         }
@@ -43,12 +44,47 @@ namespace ProyectoMixiote
 
         private void llenarComboMeseros()
         {
-
+            controladorSistema.getComboMeseros(cbomeseros);
         }
 
         public void establecerInfoCuenta(string folio)
         {
-            MessageBox.Show("establecerInfoCuenta");
+            if (!folio.Equals("") && folio!=null) //Se obtiene la informacion asociada al folio
+            {
+                Folio info = controladorSistema.verifcarExistenciaCuenta(folio);
+               //Obtener el nombre de las mesas asignadas al folio de venta
+                string [] nombreMesas = (info.Mesa).ToString().Split('/'); 
+                TextBox [] mesasForm={txtm1,txtm2,txtm3}; //Hace referencia a las 3 cajas de texto del formulario
+
+                for (int x=0;x< nombreMesas.Length;x++)
+                {
+                    if (!nombreMesas[x].Equals(""))
+                    {
+                        MessageBox.Show("El nombre de la mesa es: " + nombreMesas[x]);
+                        mesasForm[x].Text = nombreMesas[x];
+                    }
+                }
+
+                //Obtener el nombre de los meseros asignados al folio de venta
+                string[] nombreMeseros = (info.IdEmpleado).ToString().Split('/');
+                TextBox[] meserosForm = { txtmesero1, txtmesero2}; //Hace referencia a las 2 cajas de texto del formulario
+
+                for (int x = 0; x < nombreMeseros.Length; x++)
+                {
+                    if (!nombreMeseros[x].Equals(""))
+                    {
+                        MessageBox.Show("El nombre del mesero es: " + nombreMeseros[x]);
+                        meserosForm[x].Text = nombreMeseros[x];
+                    }
+                }
+
+                MessageBox.Show("Se llenaron las cajas");
+            }
+            else //Se inserta el nombre de la mesa y se predispone a realizar la asignación de la misma
+            {
+                txtm1.Text = folio;
+                MessageBox.Show("No se encontró información");
+            }
         }
 
 
@@ -62,8 +98,20 @@ namespace ProyectoMixiote
 
         private void CreacionDeCuenta_Load(object sender, EventArgs e)
         {
+            limpiarFormulario();
             llenarComboMesas();
             llenarComboMeseros();
+        }
+
+        private void limpiarFormulario()
+        {
+            cbomesas.Items.Clear();
+            cbomeseros.Items.Clear();
+            txtm1.Text = "";
+            txtm2.Text = "";
+            txtm3.Text = "";
+            txtmesero1.Text = "";
+            txtmesero2.Text = "";
         }
     }
 }

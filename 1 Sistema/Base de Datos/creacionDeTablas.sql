@@ -1,6 +1,8 @@
 CREATE DATABASE casaMixiote;
 USE casaMixiote;
 
+--DROP DATABASE casaMixiote;
+
 CREATE TABLE Inventario(
 	idPlatillo varchar (10),
 	platillo varchar (30) Not Null,
@@ -73,9 +75,14 @@ CREATE TABLE Folio(
 	horaEntrada time Not Null,
 	horaSalida time Not Null,
 	CONSTRAINT pkFolio PRIMARY KEY (folioVenta),
-	CONSTRAINT fkFidEmpleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(idEmpleado)
+	--CONSTRAINT fkFidEmpleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(idEmpleado) //Sucede lo mismo que en el campo mesa
 )
 
+ALTER TABLE Folio ALTER COLUMN fechaHoy SmallDateTime
+ALTER TABLE Folio ALTER COLUMN horaEntrada SmallDateTime
+ALTER TABLE Folio ALTER COLUMN horaSalida SmallDateTime
+
+SELECT * FROM Folio
 
 CREATE TABLE Venta(
 	id int identity (1,1),

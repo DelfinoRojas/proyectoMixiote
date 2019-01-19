@@ -20,4 +20,9 @@ Crear controles dentro de un contenedor
 Obtener nombre del botón que envía el evento
 	https://social.msdn.microsoft.com/Forums/es-ES/7592a9a6-9481-4949-b97a-b7ca01fcd0ef/obtener-nombre-del-que-envia-el-evento?forum=vcses
 
+_________________________________________________________
+
+
+
+
 

@@ -26,7 +26,7 @@ END
 
 -- DROP PROCEDURE SPsistema_SetFormacionMesa
 
-	/*	Ejecución del procedimiento almacenado SPsistema_FormacionMesa		*/
+	/*	Ejecución del procedimiento almacenado SPsistema_SetFormacionMesa		*/
 
 EXECUTE SPsistema_SetFormacionMesa 2,2
 
@@ -87,10 +87,8 @@ BEGIN
 	SELECT @jardin=jardin FROM FormacionMesa;
 	SET @nMesas=@frontal+@jardin;
 
-	BEGIN
-		IF exists (SELECT * FROM sys.objects WHERE name = 'Mesa' and TYPE = 'u') --Elimina la tabla Mesa si existe (Funciona 100%)
-		DROP TABLE Mesa
-	END
+	EXECUTE SPsistema_EliminarTableMesa -- Se llama al método que elimina a la tabla Mesa
+
 	BEGIN -- ----------------------------		Se crea la tabla Mesa
 		CREATE TABLE Mesa(
 			idMesa int identity (1,1),
@@ -117,6 +115,34 @@ SELECT * FROM Mesa
 
 --DROP TABLE Mesa
 /*----------------------------------------------------------------------------------------*/
+
+
+/*
+	Creaión del procedimiento almacenado SPsistema_EliminarTableMesa 
+	--Elimina la tabla Mesa una vez que se comprueba su existencia
+*/
+
+CREATE PROCEDURE SPsistema_EliminarTableMesa
+AS
+BEGIN
+		IF exists (SELECT * FROM sys.objects WHERE name = 'Mesa' and TYPE = 'u') --Elimina la tabla Mesa si existe (Funciona 100%)
+		DROP TABLE Mesa
+END
+
+
+-- DROP PROCEDURE SPsistema_EliminarTableMesa
+
+/*	Ejecución del procedimiento almacenado SPsistema_EliminarTableMesa		*/
+
+EXECUTE  SPsistema_EliminarTableMesa;
+
+--	----------------------------------------------------------------------
+SELECT * FROM Mesa
+
+--DROP TABLE Mesa
+
+/*----------------------------------------------------------------------------------------*/
+
 
 /*
 	Creaión del procedimiento almacenado SPsistema_AsignarEstadoMesa 

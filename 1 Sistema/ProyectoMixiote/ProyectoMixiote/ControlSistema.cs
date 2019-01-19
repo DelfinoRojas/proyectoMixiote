@@ -183,8 +183,6 @@ namespace ProyectoMixiote
             cnx = objeConexion.conectar();
             SqlCommand comando = new SqlCommand(query, cnx);
 
-            List<string> lista = new List<string>();
-
             try
             {
                 SqlDataReader leer = comando.ExecuteReader();
@@ -218,9 +216,10 @@ namespace ProyectoMixiote
             objeConexion.cerrar();
         }
 
-        public void verifcarExistenciaCuenta(string folioMesa)
+        public void getComboMeseros(ComboBox cbo)
         {
-            string query = "SELECT * FROM Folio WHERE folioVenta = '" + folioMesa + "'";
+            string query = "SELECT nombre FROM Empleado e INNER JOIN TipoPersonal tp" +
+                " ON e.idPuesto=tp.idPuesto WHERE tp.puesto='Mesero'";
             cnx = objeConexion.conectar();
             SqlCommand comando = new SqlCommand(query, cnx);
 
@@ -231,17 +230,55 @@ namespace ProyectoMixiote
                 {
                     while (leer.Read())
                     {
-                        
+                        cbo.Items.Add(leer["nombre"].ToString());
                     }
                 }
             }
             catch (Exception ex)
             {
                 System.Console.Write(ex);
-                MessageBox.Show("Falló la consulta getFolioDeMesa");
+                MessageBox.Show("Falló la consulta getComboMeseros");
             }
 
             objeConexion.cerrar();
+        }
+
+        public Folio verifcarExistenciaCuenta(string folioMesa)
+        {
+            string query = "SELECT * FROM Folio WHERE folioVenta = '" + folioMesa + "'";
+            cnx = objeConexion.conectar();
+            SqlCommand comando = new SqlCommand(query, cnx);
+
+            Folio datosFolio = new Folio();
+            try
+            {
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        datosFolio.FolioVenta1=leer["folioVenta"].ToString();
+                        datosFolio.Mesa = leer["mesa"].ToString();
+                        datosFolio.IdEmpleado = leer["idEmpleado"].ToString();
+                        datosFolio.NPersonas = Convert.ToInt32(leer["nPersonas"]);
+                        datosFolio.NCuentas = Convert.ToInt32(leer["nCuentas"]);
+                        datosFolio.FechaHoy = Convert.ToDateTime(leer["fechaHoy"]).ToString("dd/MM/yyyy");
+                        datosFolio.HoraEntrada = Convert.ToDateTime(leer["horaEntrada"]).ToString("hh:mm");
+                        datosFolio.HoraSalida = Convert.ToDateTime(leer["horaSalida"]).ToString("hh:mm");
+
+                        //DateTime date = Convert.ToDateTime(18/01/2019);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write(ex);
+                MessageBox.Show("Falló la consulta verifcarExistenciaCuenta");
+            }
+
+            objeConexion.cerrar();
+
+            return datosFolio;
         }
 
     }

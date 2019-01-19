@@ -38,14 +38,14 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.cbomesas = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbomeseros = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtm3 = new System.Windows.Forms.TextBox();
             this.txtm2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtmesero2 = new System.Windows.Forms.TextBox();
+            this.txtmesero1 = new System.Windows.Forms.TextBox();
             this.txtm1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -120,14 +120,14 @@
             this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.cbomesas);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbomeseros);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.txtm3);
             this.groupBox1.Controls.Add(this.txtm2);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtmesero2);
+            this.groupBox1.Controls.Add(this.txtmesero1);
             this.groupBox1.Controls.Add(this.txtm1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -190,7 +190,7 @@
             // 
             // cbomesas
             // 
-            this.cbomesas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbomesas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbomesas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbomesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbomesas.FormattingEnabled = true;
@@ -199,14 +199,14 @@
             this.cbomesas.Size = new System.Drawing.Size(106, 24);
             this.cbomesas.TabIndex = 2;
             // 
-            // comboBox1
+            // cbomeseros
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(392, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cbomeseros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbomeseros.FormattingEnabled = true;
+            this.cbomeseros.Location = new System.Drawing.Point(392, 35);
+            this.cbomeseros.Name = "cbomeseros";
+            this.cbomeseros.Size = new System.Drawing.Size(133, 24);
+            this.cbomeseros.TabIndex = 2;
             // 
             // label4
             // 
@@ -251,21 +251,21 @@
             this.txtm2.Size = new System.Drawing.Size(68, 22);
             this.txtm2.TabIndex = 1;
             // 
-            // textBox7
+            // txtmesero2
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(475, 79);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 22);
-            this.textBox7.TabIndex = 1;
+            this.txtmesero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmesero2.Location = new System.Drawing.Point(475, 79);
+            this.txtmesero2.Name = "txtmesero2";
+            this.txtmesero2.Size = new System.Drawing.Size(140, 22);
+            this.txtmesero2.TabIndex = 1;
             // 
-            // textBox6
+            // txtmesero1
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(329, 79);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 22);
-            this.textBox6.TabIndex = 1;
+            this.txtmesero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmesero1.Location = new System.Drawing.Point(329, 79);
+            this.txtmesero1.Name = "txtmesero1";
+            this.txtmesero1.Size = new System.Drawing.Size(140, 22);
+            this.txtmesero1.TabIndex = 1;
             // 
             // txtm1
             // 
@@ -566,7 +566,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbomeseros;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtm1;
         private System.Windows.Forms.Label label4;
@@ -590,8 +590,8 @@
         private System.Windows.Forms.ComboBox cbomesas;
         private System.Windows.Forms.TextBox txtm3;
         private System.Windows.Forms.TextBox txtm2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtmesero2;
+        private System.Windows.Forms.TextBox txtmesero1;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
