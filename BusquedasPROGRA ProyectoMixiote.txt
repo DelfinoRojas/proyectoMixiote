@@ -1,0 +1,19 @@
+Agregar una imagen a un label
+	https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.label.image?view=netframework-4.7.2
+
+Agregar o quitar controles de una colección
+	https://docs.microsoft.com/es-es/dotnet/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time
+
+Autocompletar un text box mientras se escribe
+	http://ltuttini.blogspot.com/2009/09/c-autocomplete-combobox-o-textbox.html
+
+Imprimir ticket
+	https://jhoncmc.blogspot.com/2015/10/como-crear-un-ticket-de-venta-en-c.html
+	
+	Imprimir imagen de cabecera
+	Imprimir códdigo de barras al final del ticket
+_________________________________________________________
+
+Crear controles dentro de un contenedor
+	https://www.youtube.com/watch?v=evmy60nj2YA
+

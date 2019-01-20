@@ -125,18 +125,18 @@ namespace ProyectoMixiote
 
         private void btnasignarMesa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1Mesas");
+            //MessageBox.Show("1Mesas");
             if (!cbomesas.Text.Equals("")) //Se valida que el combo tenga una selección
             {
-                MessageBox.Show("2Mesas");
+                //MessageBox.Show("2Mesas");
                 TextBox[] mesasForm = getCajasMesas();
                 for (int x=0;x<mesasForm.Length;x++) //Se recorren las cajas (mesas) para encontrar una libre
                 {
                     if (mesasForm[x].Text.Equals("")) //Se valida la disponibilidad de la caja de texto (mesas)
                     {
-                        MessageBox.Show("3Mesas");
+                        //MessageBox.Show("3Mesas");
                         mesasForm[x].Text = cbomesas.Text; //Se asigna el nombre de la mesa
-                        cbomesas.Items.Remove(mesasForm[x]); //Se libera la mesa del combo
+                        cbomesas.Items.Remove(mesasForm[x].Text); //Se libera la mesa del combo
                         break;
                     }
                 }
@@ -145,18 +145,18 @@ namespace ProyectoMixiote
 
         private void btnasignarMesero_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1Mesero");
+            //MessageBox.Show("1Mesero");
             if (!cbomeseros.Text.Equals("")) //Se valida que el combo tenga una selección
             {
-                MessageBox.Show("2Mesero");
+                //MessageBox.Show("2Mesero");
                 TextBox[] meserosForm = getCajasMeseros();
                 for (int x = 0; x < meserosForm.Length; x++) //Se recorren las cajas (meseros) para encontrar una libre
                 {
                     if (meserosForm[x].Text.Equals("")) //Se valida la disponibilidad de la caja de texto (meseros)
                     {
-                        MessageBox.Show("3Mesero");
+                        //MessageBox.Show("3Mesero");
                         meserosForm[x].Text = cbomeseros.Text; //Se asigna el nombre del mesero
-                        cbomeseros.Items.Remove(meserosForm[x]); //Se libera el mesero del combo
+                        cbomeseros.Items.Remove(meserosForm[x].Text); //Se libera el mesero del combo
                         break;
                     }
                 }
