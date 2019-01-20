@@ -33,21 +33,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btndescartarGenerales = new System.Windows.Forms.Button();
+            this.btnguardarGenerales = new System.Windows.Forms.Button();
+            this.btnasignarMesero = new System.Windows.Forms.Button();
+            this.btnasignarMesa = new System.Windows.Forms.Button();
             this.cbomesas = new System.Windows.Forms.ComboBox();
             this.cbomeseros = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbondivisiones = new System.Windows.Forms.ComboBox();
+            this.txtncomensales = new System.Windows.Forms.TextBox();
             this.txtm3 = new System.Windows.Forms.TextBox();
             this.txtm2 = new System.Windows.Forms.TextBox();
             this.txtmesero2 = new System.Windows.Forms.TextBox();
             this.txtmesero1 = new System.Windows.Forms.TextBox();
             this.txtm1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbocuentasAsociadas = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -69,13 +69,13 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnasignarCuenta = new System.Windows.Forms.Button();
+            this.btncancelarCuenta = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.btnfacturar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbocuentasAsociadas.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -115,15 +115,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button11);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.button8);
+            this.groupBox1.Controls.Add(this.btndescartarGenerales);
+            this.groupBox1.Controls.Add(this.btnguardarGenerales);
+            this.groupBox1.Controls.Add(this.btnasignarMesero);
+            this.groupBox1.Controls.Add(this.btnasignarMesa);
             this.groupBox1.Controls.Add(this.cbomesas);
             this.groupBox1.Controls.Add(this.cbomeseros);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.cbondivisiones);
+            this.groupBox1.Controls.Add(this.txtncomensales);
             this.groupBox1.Controls.Add(this.txtm3);
             this.groupBox1.Controls.Add(this.txtm2);
             this.groupBox1.Controls.Add(this.txtmesero2);
@@ -139,54 +139,56 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
             // 
-            // button11
+            // btndescartarGenerales
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(306, 120);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(163, 41);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Reestablecer datos generales";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = true;
+            this.btndescartarGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndescartarGenerales.ForeColor = System.Drawing.Color.Black;
+            this.btndescartarGenerales.Image = ((System.Drawing.Image)(resources.GetObject("btndescartarGenerales.Image")));
+            this.btndescartarGenerales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndescartarGenerales.Location = new System.Drawing.Point(306, 120);
+            this.btndescartarGenerales.Name = "btndescartarGenerales";
+            this.btndescartarGenerales.Size = new System.Drawing.Size(163, 41);
+            this.btndescartarGenerales.TabIndex = 4;
+            this.btndescartarGenerales.Text = "Reestablecer datos generales";
+            this.btndescartarGenerales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btndescartarGenerales.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnguardarGenerales
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(113, 120);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(163, 41);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Guardar datos \r\ngenerales";
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnguardarGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardarGenerales.Image = ((System.Drawing.Image)(resources.GetObject("btnguardarGenerales.Image")));
+            this.btnguardarGenerales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnguardarGenerales.Location = new System.Drawing.Point(113, 120);
+            this.btnguardarGenerales.Name = "btnguardarGenerales";
+            this.btnguardarGenerales.Size = new System.Drawing.Size(163, 41);
+            this.btnguardarGenerales.TabIndex = 4;
+            this.btnguardarGenerales.Text = "Guardar datos \r\ngenerales";
+            this.btnguardarGenerales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnguardarGenerales.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnasignarMesero
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Maroon;
-            this.button9.Location = new System.Drawing.Point(531, 35);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(93, 24);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Asignar mesero";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnasignarMesero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasignarMesero.ForeColor = System.Drawing.Color.Maroon;
+            this.btnasignarMesero.Location = new System.Drawing.Point(531, 35);
+            this.btnasignarMesero.Name = "btnasignarMesero";
+            this.btnasignarMesero.Size = new System.Drawing.Size(93, 24);
+            this.btnasignarMesero.TabIndex = 4;
+            this.btnasignarMesero.Text = "Asignar mesero";
+            this.btnasignarMesero.UseVisualStyleBackColor = true;
+            this.btnasignarMesero.Click += new System.EventHandler(this.btnasignarMesero_Click);
             // 
-            // button8
+            // btnasignarMesa
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Maroon;
-            this.button8.Location = new System.Drawing.Point(171, 35);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(93, 24);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Asignar mesa";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnasignarMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasignarMesa.ForeColor = System.Drawing.Color.Maroon;
+            this.btnasignarMesa.Location = new System.Drawing.Point(171, 35);
+            this.btnasignarMesa.Name = "btnasignarMesa";
+            this.btnasignarMesa.Size = new System.Drawing.Size(93, 24);
+            this.btnasignarMesa.TabIndex = 4;
+            this.btnasignarMesa.Text = "Asignar mesa";
+            this.btnasignarMesa.UseVisualStyleBackColor = true;
+            this.btnasignarMesa.Click += new System.EventHandler(this.btnasignarMesa_Click);
             // 
             // cbomesas
             // 
@@ -218,22 +220,27 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "N. divisiones de la cuenta";
             // 
-            // comboBox2
+            // cbondivisiones
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(720, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 3;
+            this.cbondivisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbondivisiones.FormattingEnabled = true;
+            this.cbondivisiones.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbondivisiones.Location = new System.Drawing.Point(720, 120);
+            this.cbondivisiones.Name = "cbondivisiones";
+            this.cbondivisiones.Size = new System.Drawing.Size(121, 24);
+            this.cbondivisiones.TabIndex = 3;
             // 
-            // textBox2
+            // txtncomensales
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(729, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtncomensales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtncomensales.Location = new System.Drawing.Point(729, 52);
+            this.txtncomensales.Name = "txtncomensales";
+            this.txtncomensales.Size = new System.Drawing.Size(100, 22);
+            this.txtncomensales.TabIndex = 1;
             // 
             // txtm3
             // 
@@ -275,15 +282,15 @@
             this.txtm1.Size = new System.Drawing.Size(68, 22);
             this.txtm1.TabIndex = 1;
             // 
-            // groupBox2
+            // gbocuentasAsociadas
             // 
-            this.groupBox2.Controls.Add(this.panel1);
-            this.groupBox2.Location = new System.Drawing.Point(47, 292);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(763, 189);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cuentas asociadas";
+            this.gbocuentasAsociadas.Controls.Add(this.panel1);
+            this.gbocuentasAsociadas.Location = new System.Drawing.Point(47, 292);
+            this.gbocuentasAsociadas.Name = "gbocuentasAsociadas";
+            this.gbocuentasAsociadas.Size = new System.Drawing.Size(763, 189);
+            this.gbocuentasAsociadas.TabIndex = 4;
+            this.gbocuentasAsociadas.TabStop = false;
+            this.gbocuentasAsociadas.Text = "Cuentas asociadas";
             // 
             // panel1
             // 
@@ -465,36 +472,36 @@
             this.button3.Text = "Cuenta 1";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnasignarCuenta
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(47, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "   Asignar mesa";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnasignarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnasignarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasignarCuenta.ForeColor = System.Drawing.Color.Green;
+            this.btnasignarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnasignarCuenta.Image")));
+            this.btnasignarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnasignarCuenta.Location = new System.Drawing.Point(47, 204);
+            this.btnasignarCuenta.Name = "btnasignarCuenta";
+            this.btnasignarCuenta.Size = new System.Drawing.Size(189, 41);
+            this.btnasignarCuenta.TabIndex = 5;
+            this.btnasignarCuenta.Text = "   Asignar cuenta";
+            this.btnasignarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnasignarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnasignarCuenta.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btncancelarCuenta
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(261, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 41);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "   Cancelar mesa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btncancelarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelarCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btncancelarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btncancelarCuenta.Image")));
+            this.btncancelarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncancelarCuenta.Location = new System.Drawing.Point(261, 204);
+            this.btncancelarCuenta.Name = "btncancelarCuenta";
+            this.btncancelarCuenta.Size = new System.Drawing.Size(198, 41);
+            this.btncancelarCuenta.TabIndex = 5;
+            this.btncancelarCuenta.Text = "   Cancelar cuenta";
+            this.btncancelarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncancelarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncancelarCuenta.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -506,42 +513,42 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Folio:";
             // 
-            // textBox3
+            // txtfolio
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(580, 211);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 43);
-            this.textBox3.TabIndex = 1;
+            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtfolio.Location = new System.Drawing.Point(580, 211);
+            this.txtfolio.Multiline = true;
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(132, 43);
+            this.txtfolio.TabIndex = 1;
             // 
-            // button7
+            // btnfacturar
             // 
-            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(728, 204);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(164, 55);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "FACTURAR TODO";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnfacturar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnfacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfacturar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnfacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnfacturar.Image")));
+            this.btnfacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnfacturar.Location = new System.Drawing.Point(728, 204);
+            this.btnfacturar.Name = "btnfacturar";
+            this.btnfacturar.Size = new System.Drawing.Size(164, 55);
+            this.btnfacturar.TabIndex = 5;
+            this.btnfacturar.Text = "FACTURAR TODO";
+            this.btnfacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnfacturar.UseVisualStyleBackColor = false;
             // 
             // CreacionDeCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 495);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btncancelarCuenta);
+            this.Controls.Add(this.btnfacturar);
+            this.Controls.Add(this.btnasignarCuenta);
+            this.Controls.Add(this.gbocuentasAsociadas);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtfolio);
             this.Controls.Add(this.label5);
             this.Name = "CreacionDeCuenta";
             this.Text = "CreacionDeCuenta";
@@ -549,7 +556,7 @@
             this.Load += new System.EventHandler(this.CreacionDeCuenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbocuentasAsociadas.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -567,26 +574,26 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbomeseros;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtncomensales;
         private System.Windows.Forms.TextBox txtm1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbondivisiones;
+        private System.Windows.Forms.GroupBox gbocuentasAsociadas;
+        private System.Windows.Forms.Button btnasignarCuenta;
+        private System.Windows.Forms.Button btncancelarCuenta;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtfolio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnfacturar;
+        private System.Windows.Forms.Button btndescartarGenerales;
+        private System.Windows.Forms.Button btnguardarGenerales;
+        private System.Windows.Forms.Button btnasignarMesero;
+        private System.Windows.Forms.Button btnasignarMesa;
         private System.Windows.Forms.ComboBox cbomesas;
         private System.Windows.Forms.TextBox txtm3;
         private System.Windows.Forms.TextBox txtm2;
