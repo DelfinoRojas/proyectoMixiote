@@ -193,7 +193,7 @@ namespace ProyectoMixiote
                     {
                         if (conta<=formacion[0]) //Identifica las mesas de la parte frontal
                         {
-                            cbo.Items.Add("(F)  "+leer["nombreMesa"].ToString());
+                            cbo.Items.Add(leer["nombreMesa"].ToString());
                             if (conta==formacion[0])
                             {
                                 cbo.Items.Add(""); //Crea una separación dentro del combo
@@ -201,7 +201,7 @@ namespace ProyectoMixiote
                         }
                         else //Identifica las mesas del jardin
                         {
-                            cbo.Items.Add("(J)  " + leer["nombreMesa"].ToString());
+                            cbo.Items.Add(leer["nombreMesa"].ToString());
                         }
                         conta++;
                     }

@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreacionDeCuenta));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbondivisiones = new System.Windows.Forms.ComboBox();
             this.txtncomensales = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btndescartarGenerales = new System.Windows.Forms.Button();
             this.btnguardarGenerales = new System.Windows.Forms.Button();
             this.btnasignarMesero = new System.Windows.Forms.Button();
@@ -47,6 +45,17 @@
             this.txtmesero2 = new System.Windows.Forms.TextBox();
             this.txtmesero1 = new System.Windows.Forms.TextBox();
             this.txtm1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btncancelarCuenta = new System.Windows.Forms.Button();
+            this.btnfacturar = new System.Windows.Forms.Button();
+            this.btnasignarCuenta = new System.Windows.Forms.Button();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbocuentasAsociadas = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -69,15 +78,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnasignarCuenta = new System.Windows.Forms.Button();
-            this.btncancelarCuenta = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtfolio = new System.Windows.Forms.TextBox();
-            this.btnfacturar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbocuentasAsociadas.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,44 +87,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mesa:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(497, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mesero:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(97, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "N. Comensales";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.cbondivisiones);
             this.groupBox1.Controls.Add(this.txtncomensales);
+            this.groupBox1.Controls.Add(this.btncancelarCuenta);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnfacturar);
+            this.groupBox1.Controls.Add(this.btnasignarCuenta);
             this.groupBox1.Controls.Add(this.btndescartarGenerales);
+            this.groupBox1.Controls.Add(this.txtfolio);
             this.groupBox1.Controls.Add(this.btnguardarGenerales);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnasignarMesero);
             this.groupBox1.Controls.Add(this.btnasignarMesa);
             this.groupBox1.Controls.Add(this.cbomesas);
@@ -136,10 +115,10 @@
             this.groupBox1.Controls.Add(this.txtm1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(25, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1046, 239);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(1056, 417);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
             // 
@@ -147,7 +126,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(246, 159);
+            this.label4.Location = new System.Drawing.Point(456, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(175, 18);
             this.label4.TabIndex = 2;
@@ -155,25 +134,35 @@
             // 
             // cbondivisiones
             // 
-            this.cbondivisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbondivisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbondivisiones.FormattingEnabled = true;
             this.cbondivisiones.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.cbondivisiones.Location = new System.Drawing.Point(269, 188);
+            this.cbondivisiones.Location = new System.Drawing.Point(479, 189);
             this.cbondivisiones.Name = "cbondivisiones";
-            this.cbondivisiones.Size = new System.Drawing.Size(121, 24);
+            this.cbondivisiones.Size = new System.Drawing.Size(121, 26);
             this.cbondivisiones.TabIndex = 3;
             // 
             // txtncomensales
             // 
-            this.txtncomensales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtncomensales.Location = new System.Drawing.Point(100, 188);
+            this.txtncomensales.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtncomensales.Location = new System.Drawing.Point(492, 70);
             this.txtncomensales.Name = "txtncomensales";
-            this.txtncomensales.Size = new System.Drawing.Size(100, 22);
+            this.txtncomensales.Size = new System.Drawing.Size(100, 24);
             this.txtncomensales.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(489, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "N. Comensales";
             // 
             // btndescartarGenerales
             // 
@@ -181,7 +170,7 @@
             this.btndescartarGenerales.ForeColor = System.Drawing.Color.Black;
             this.btndescartarGenerales.Image = ((System.Drawing.Image)(resources.GetObject("btndescartarGenerales.Image")));
             this.btndescartarGenerales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndescartarGenerales.Location = new System.Drawing.Point(697, 169);
+            this.btndescartarGenerales.Location = new System.Drawing.Point(716, 160);
             this.btndescartarGenerales.Name = "btndescartarGenerales";
             this.btndescartarGenerales.Size = new System.Drawing.Size(191, 50);
             this.btndescartarGenerales.TabIndex = 4;
@@ -194,7 +183,7 @@
             this.btnguardarGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardarGenerales.Image = ((System.Drawing.Image)(resources.GetObject("btnguardarGenerales.Image")));
             this.btnguardarGenerales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnguardarGenerales.Location = new System.Drawing.Point(500, 171);
+            this.btnguardarGenerales.Location = new System.Drawing.Point(716, 58);
             this.btnguardarGenerales.Name = "btnguardarGenerales";
             this.btnguardarGenerales.Size = new System.Drawing.Size(191, 48);
             this.btnguardarGenerales.TabIndex = 4;
@@ -204,11 +193,11 @@
             // 
             // btnasignarMesero
             // 
-            this.btnasignarMesero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasignarMesero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnasignarMesero.ForeColor = System.Drawing.Color.Maroon;
-            this.btnasignarMesero.Location = new System.Drawing.Point(759, 39);
+            this.btnasignarMesero.Location = new System.Drawing.Point(259, 151);
             this.btnasignarMesero.Name = "btnasignarMesero";
-            this.btnasignarMesero.Size = new System.Drawing.Size(129, 40);
+            this.btnasignarMesero.Size = new System.Drawing.Size(143, 40);
             this.btnasignarMesero.TabIndex = 4;
             this.btnasignarMesero.Text = "Asignar mesero";
             this.btnasignarMesero.UseVisualStyleBackColor = true;
@@ -218,9 +207,9 @@
             // 
             this.btnasignarMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnasignarMesa.ForeColor = System.Drawing.Color.Maroon;
-            this.btnasignarMesa.Location = new System.Drawing.Point(290, 40);
+            this.btnasignarMesa.Location = new System.Drawing.Point(259, 30);
             this.btnasignarMesa.Name = "btnasignarMesa";
-            this.btnasignarMesa.Size = new System.Drawing.Size(129, 40);
+            this.btnasignarMesa.Size = new System.Drawing.Size(143, 40);
             this.btnasignarMesa.TabIndex = 4;
             this.btnasignarMesa.Text = "Asignar mesa";
             this.btnasignarMesa.UseVisualStyleBackColor = true;
@@ -230,70 +219,195 @@
             // 
             this.cbomesas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbomesas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbomesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbomesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbomesas.FormattingEnabled = true;
-            this.cbomesas.Location = new System.Drawing.Point(142, 49);
+            this.cbomesas.Location = new System.Drawing.Point(83, 39);
             this.cbomesas.Name = "cbomesas";
-            this.cbomesas.Size = new System.Drawing.Size(133, 24);
+            this.cbomesas.Size = new System.Drawing.Size(133, 26);
             this.cbomesas.TabIndex = 2;
             // 
             // cbomeseros
             // 
-            this.cbomeseros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbomeseros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbomeseros.FormattingEnabled = true;
-            this.cbomeseros.Location = new System.Drawing.Point(562, 48);
+            this.cbomeseros.Location = new System.Drawing.Point(76, 160);
             this.cbomeseros.Name = "cbomeseros";
-            this.cbomeseros.Size = new System.Drawing.Size(177, 24);
+            this.cbomeseros.Size = new System.Drawing.Size(177, 26);
             this.cbomeseros.TabIndex = 2;
             // 
             // txtm3
             // 
-            this.txtm3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtm3.Location = new System.Drawing.Point(193, 92);
+            this.txtm3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtm3.Location = new System.Drawing.Point(259, 82);
             this.txtm3.Name = "txtm3";
-            this.txtm3.Size = new System.Drawing.Size(101, 22);
+            this.txtm3.Size = new System.Drawing.Size(101, 24);
             this.txtm3.TabIndex = 1;
             // 
             // txtm2
             // 
-            this.txtm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtm2.Location = new System.Drawing.Point(318, 92);
+            this.txtm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtm2.Location = new System.Drawing.Point(136, 82);
             this.txtm2.Name = "txtm2";
-            this.txtm2.Size = new System.Drawing.Size(101, 22);
+            this.txtm2.Size = new System.Drawing.Size(101, 24);
             this.txtm2.TabIndex = 1;
             // 
             // txtmesero2
             // 
-            this.txtmesero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmesero2.Location = new System.Drawing.Point(697, 92);
+            this.txtmesero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmesero2.Location = new System.Drawing.Point(211, 204);
             this.txtmesero2.Name = "txtmesero2";
-            this.txtmesero2.Size = new System.Drawing.Size(191, 22);
+            this.txtmesero2.Size = new System.Drawing.Size(191, 24);
             this.txtmesero2.TabIndex = 1;
             // 
             // txtmesero1
             // 
-            this.txtmesero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmesero1.Location = new System.Drawing.Point(500, 92);
+            this.txtmesero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmesero1.Location = new System.Drawing.Point(14, 204);
             this.txtmesero1.Name = "txtmesero1";
-            this.txtmesero1.Size = new System.Drawing.Size(191, 22);
+            this.txtmesero1.Size = new System.Drawing.Size(191, 24);
             this.txtmesero1.TabIndex = 1;
             // 
             // txtm1
             // 
-            this.txtm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtm1.Location = new System.Drawing.Point(75, 92);
+            this.txtm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtm1.Location = new System.Drawing.Point(16, 82);
             this.txtm1.Name = "txtm1";
-            this.txtm1.Size = new System.Drawing.Size(101, 22);
+            this.txtm1.Size = new System.Drawing.Size(101, 24);
             this.txtm1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mesa:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mesero:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Image = global::ProyectoMixiote.Properties.Resources.save;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(41, 304);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "          Tiempo transcurrido";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(84, 347);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 18);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Hora de llegada";
+            // 
+            // btncancelarCuenta
+            // 
+            this.btncancelarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelarCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btncancelarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btncancelarCuenta.Image")));
+            this.btncancelarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncancelarCuenta.Location = new System.Drawing.Point(716, 266);
+            this.btncancelarCuenta.Name = "btncancelarCuenta";
+            this.btncancelarCuenta.Size = new System.Drawing.Size(206, 56);
+            this.btncancelarCuenta.TabIndex = 11;
+            this.btncancelarCuenta.Text = "   Cancelar cuenta";
+            this.btncancelarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncancelarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btncancelarCuenta.UseVisualStyleBackColor = true;
+            // 
+            // btnfacturar
+            // 
+            this.btnfacturar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnfacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfacturar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnfacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnfacturar.Image")));
+            this.btnfacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnfacturar.Location = new System.Drawing.Point(892, 362);
+            this.btnfacturar.Name = "btnfacturar";
+            this.btnfacturar.Size = new System.Drawing.Size(164, 55);
+            this.btnfacturar.TabIndex = 12;
+            this.btnfacturar.Text = "FACTURAR TODO";
+            this.btnfacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnfacturar.UseVisualStyleBackColor = false;
+            // 
+            // btnasignarCuenta
+            // 
+            this.btnasignarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnasignarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasignarCuenta.ForeColor = System.Drawing.Color.Green;
+            this.btnasignarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnasignarCuenta.Image")));
+            this.btnasignarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnasignarCuenta.Location = new System.Drawing.Point(472, 266);
+            this.btnasignarCuenta.Name = "btnasignarCuenta";
+            this.btnasignarCuenta.Size = new System.Drawing.Size(206, 56);
+            this.btnasignarCuenta.TabIndex = 13;
+            this.btnasignarCuenta.Text = "   Asignar cuenta";
+            this.btnasignarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnasignarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnasignarCuenta.UseVisualStyleBackColor = false;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtfolio.Location = new System.Drawing.Point(546, 343);
+            this.txtfolio.Multiline = true;
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(132, 43);
+            this.txtfolio.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(468, 349);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Folio:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(238, 300);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(146, 22);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(238, 346);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 22);
+            this.textBox1.TabIndex = 10;
             // 
             // gbocuentasAsociadas
             // 
             this.gbocuentasAsociadas.Controls.Add(this.panel1);
             this.gbocuentasAsociadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbocuentasAsociadas.Location = new System.Drawing.Point(57, 461);
+            this.gbocuentasAsociadas.Location = new System.Drawing.Point(42, 465);
             this.gbocuentasAsociadas.Name = "gbocuentasAsociadas";
             this.gbocuentasAsociadas.Size = new System.Drawing.Size(943, 159);
-            this.gbocuentasAsociadas.TabIndex = 4;
+            this.gbocuentasAsociadas.TabIndex = 16;
             this.gbocuentasAsociadas.TabStop = false;
             this.gbocuentasAsociadas.Text = "Cuentas asociadas";
             // 
@@ -477,131 +591,17 @@
             this.button3.Text = "Cuenta 1";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // btnasignarCuenta
-            // 
-            this.btnasignarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnasignarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnasignarCuenta.ForeColor = System.Drawing.Color.Green;
-            this.btnasignarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btnasignarCuenta.Image")));
-            this.btnasignarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnasignarCuenta.Location = new System.Drawing.Point(87, 296);
-            this.btnasignarCuenta.Name = "btnasignarCuenta";
-            this.btnasignarCuenta.Size = new System.Drawing.Size(229, 56);
-            this.btnasignarCuenta.TabIndex = 5;
-            this.btnasignarCuenta.Text = "   Asignar cuenta";
-            this.btnasignarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnasignarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnasignarCuenta.UseVisualStyleBackColor = false;
-            // 
-            // btncancelarCuenta
-            // 
-            this.btncancelarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelarCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btncancelarCuenta.Image = ((System.Drawing.Image)(resources.GetObject("btncancelarCuenta.Image")));
-            this.btncancelarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncancelarCuenta.Location = new System.Drawing.Point(87, 360);
-            this.btncancelarCuenta.Name = "btncancelarCuenta";
-            this.btncancelarCuenta.Size = new System.Drawing.Size(229, 56);
-            this.btncancelarCuenta.TabIndex = 5;
-            this.btncancelarCuenta.Text = "   Cancelar cuenta";
-            this.btncancelarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncancelarCuenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btncancelarCuenta.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(395, 294);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Folio:";
-            // 
-            // txtfolio
-            // 
-            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfolio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtfolio.Location = new System.Drawing.Point(456, 291);
-            this.txtfolio.Multiline = true;
-            this.txtfolio.Name = "txtfolio";
-            this.txtfolio.Size = new System.Drawing.Size(132, 43);
-            this.txtfolio.TabIndex = 1;
-            // 
-            // btnfacturar
-            // 
-            this.btnfacturar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnfacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfacturar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnfacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnfacturar.Image")));
-            this.btnfacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnfacturar.Location = new System.Drawing.Point(424, 356);
-            this.btnfacturar.Name = "btnfacturar";
-            this.btnfacturar.Size = new System.Drawing.Size(164, 55);
-            this.btnfacturar.TabIndex = 5;
-            this.btnfacturar.Text = "FACTURAR TODO";
-            this.btnfacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnfacturar.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(652, 311);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 18);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Hora de llegada";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(854, 313);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(854, 360);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = global::ProyectoMixiote.Properties.Resources.save;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(652, 364);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 18);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "          Tiempo transcurrido";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // CreacionDeCuenta
+            // Creacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 650);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btncancelarCuenta);
-            this.Controls.Add(this.btnfacturar);
-            this.Controls.Add(this.btnasignarCuenta);
+            this.ClientSize = new System.Drawing.Size(1108, 650);
             this.Controls.Add(this.gbocuentasAsociadas);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtfolio);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "CreacionDeCuenta";
-            this.Text = "CreacionDeCuenta";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.salir);
-            this.Load += new System.EventHandler(this.CreacionDeCuenta_Load);
+            this.Name = "Creacion";
+            this.Text = "Creacion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Creacion_FormClosed);
+            this.Load += new System.EventHandler(this.Creacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbocuentasAsociadas.ResumeLayout(false);
@@ -611,42 +611,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbomeseros;
-        private System.Windows.Forms.TextBox txtncomensales;
-        private System.Windows.Forms.TextBox txtm1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbondivisiones;
-        private System.Windows.Forms.GroupBox gbocuentasAsociadas;
-        private System.Windows.Forms.Button btnasignarCuenta;
-        private System.Windows.Forms.Button btncancelarCuenta;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtfolio;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnfacturar;
+        private System.Windows.Forms.TextBox txtncomensales;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btndescartarGenerales;
         private System.Windows.Forms.Button btnguardarGenerales;
         private System.Windows.Forms.Button btnasignarMesero;
         private System.Windows.Forms.Button btnasignarMesa;
         private System.Windows.Forms.ComboBox cbomesas;
+        private System.Windows.Forms.ComboBox cbomeseros;
         private System.Windows.Forms.TextBox txtm3;
         private System.Windows.Forms.TextBox txtm2;
         private System.Windows.Forms.TextBox txtmesero2;
         private System.Windows.Forms.TextBox txtmesero1;
+        private System.Windows.Forms.TextBox txtm1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btncancelarCuenta;
+        private System.Windows.Forms.Button btnfacturar;
+        private System.Windows.Forms.Button btnasignarCuenta;
+        private System.Windows.Forms.TextBox txtfolio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox gbocuentasAsociadas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -659,12 +659,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

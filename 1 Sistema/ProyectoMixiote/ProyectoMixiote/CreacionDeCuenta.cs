@@ -15,7 +15,7 @@ namespace ProyectoMixiote
 
         private ControlSistema controladorSistema; //Variable global que conecta con el controlador general del Sistema
 
-        public CreacionDeCuenta(int option,string parametro)
+        public CreacionDeCuenta(int option, string parametro)
         {
             InitializeComponent();
 
@@ -23,9 +23,9 @@ namespace ProyectoMixiote
 
             string folio = ""; //Variable que almacenará el folio de la mesa en cuestión
 
-            if (option==1)
+            if (option == 1)
             {
-                folio=controladorSistema.getFolioDeMesa(parametro); //Se envía el nombre de la mesa y se recibe el folio de la misma
+                folio = controladorSistema.getFolioDeMesa(parametro); //Se envía el nombre de la mesa y se recibe el folio de la misma
             }
             else
             {
@@ -34,8 +34,8 @@ namespace ProyectoMixiote
 
             //MessageBox.Show("El folio es: "+folio);
             establecerInfoCuenta(folio);
-
         }
+
 
         private void llenarComboMesas()
         {
@@ -49,14 +49,14 @@ namespace ProyectoMixiote
 
         public void establecerInfoCuenta(string folio)
         {
-            if (!folio.Equals("") && folio!=null) //Se obtiene la informacion asociada al folio
+            if (!folio.Equals("") && folio != null) //Se obtiene la informacion asociada al folio
             {
                 Folio info = controladorSistema.verifcarExistenciaCuenta(folio);
-               //Obtener el nombre de las mesas asignadas al folio de venta
-                string [] nombreMesas = (info.Mesa).ToString().Split('/');
+                //Obtener el nombre de las mesas asignadas al folio de venta
+                string[] nombreMesas = (info.Mesa).ToString().Split('/');
                 TextBox[] mesasForm = getCajasMesas(); //Se obtienen las cajas del formulario
 
-                for (int x=0;x< nombreMesas.Length;x++)
+                for (int x = 0; x < nombreMesas.Length; x++)
                 {
                     if (!nombreMesas[x].Equals(""))
                     {
@@ -81,30 +81,14 @@ namespace ProyectoMixiote
                 cbondivisiones.Text = info.NCuentas.ToString();
                 txtfolio.Text = info.FolioVenta1.ToString();
 
-                
-                
+
+
             }
             else //Se inserta el nombre de la mesa y se predispone a realizar la asignación de la misma
             {
                 txtm1.Text = folio;
                 //MessageBox.Show("No se encontró información");
             }
-        }
-
-
-
-        private void salir(object sender, FormClosedEventArgs e)
-        {
-            this.Dispose();
-            InicializarMesas form = new InicializarMesas(2);
-            form.Visible = true;
-        }
-
-        private void CreacionDeCuenta_Load(object sender, EventArgs e)
-        {
-            limpiarCombos();
-            llenarComboMesas();
-            llenarComboMeseros();
         }
 
         private void limpiarCombos()
@@ -130,7 +114,7 @@ namespace ProyectoMixiote
             {
                 //MessageBox.Show("2Mesas");
                 TextBox[] mesasForm = getCajasMesas();
-                for (int x=0;x<mesasForm.Length;x++) //Se recorren las cajas (mesas) para encontrar una libre
+                for (int x = 0; x < mesasForm.Length; x++) //Se recorren las cajas (mesas) para encontrar una libre
                 {
                     if (mesasForm[x].Text.Equals("")) //Se valida la disponibilidad de la caja de texto (mesas)
                     {
@@ -175,6 +159,19 @@ namespace ProyectoMixiote
             return meserosForm;
         }
 
-        
+        private void Creacion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            InicializarMesas form = new InicializarMesas(2);
+            form.Visible = true;
+        }
+
+        private void Creacion_Load(object sender, EventArgs e)
+        {
+            limpiarCombos();
+            llenarComboMesas();
+            llenarComboMeseros();
+        }
+
     }
 }

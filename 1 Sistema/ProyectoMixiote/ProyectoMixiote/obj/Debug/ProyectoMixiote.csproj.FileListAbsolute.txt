@@ -1,24 +1,8 @@
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe.config
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.pdb
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csprojAssemblyReference.cache
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.InicializarMesas.resources
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.Properties.Resources.resources
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csproj.GenerateResource.cache
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csproj.CoreCompileInputs.cache
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.exe
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.pdb
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.CreacionDeCuenta.resources
-D:\3 Bibliotecas\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.DesarrolloDeCuenta.resources
-D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.PagoDeCuenta.resources
-D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.AsignarPropinas.resources
-D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.HistorialMesero.resources
-D:\3 BIBLIOTECAS\Documents\1.-PROGRAMACIÓN\Aplicaciones C#\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.PagoNomina.resources
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe.config
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.exe
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\bin\Debug\ProyectoMixiote.pdb
+C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csprojAssemblyReference.cache
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.AsignarPropinas.resources
-C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.CreacionDeCuenta.resources
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.DesarrolloDeCuenta.resources
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.HistorialMesero.resources
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.InicializarMesas.resources
@@ -29,4 +13,4 @@ C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\Proyect
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csproj.CoreCompileInputs.cache
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.exe
 C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.pdb
-C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.csprojAssemblyReference.cache
+C:\Users\DELFINO\Google Drive\Proyecto Mixiote\1 Sistema\ProyectoMixiote\ProyectoMixiote\obj\Debug\ProyectoMixiote.CreacionDeCuenta.resources
